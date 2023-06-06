@@ -1,11 +1,7 @@
 import Modal from "react-modal";
-import { useState } from "react";
 
 export default function ModalForm(props) {
-  const [isOpen, setIsOpen] = useState(false);
-
   const handleCloseModal = () => {
-    setIsOpen(false);
     props.onClose();
   };
 
@@ -19,6 +15,7 @@ export default function ModalForm(props) {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       zIndex: 50,
+      backgroundColor: "rgb(226, 200, 183)",
     },
   };
   return (
@@ -27,13 +24,19 @@ export default function ModalForm(props) {
       onRequestClose={handleCloseModal}
       style={customStyles}
     >
-      <p>Hi there,</p>
-      <p>
-        This website is for learning purpose, no information were sent using
-        this form. Thank you for testing the form and visiting my website!
-      </p>
-      <button onClick={handleCloseModal}>Close</button>
-      {/* <button onClick={() => setIsOpen(false)}>Close</button> */}
+      <div className="text-center">
+        <p>Hi there,</p>
+        <p>
+          This website is for learning purpose, no information were sent using
+          this form. Thank you for testing the form and visiting my website!
+        </p>
+        <button
+          className="text-orange-950 text-center"
+          onClick={handleCloseModal}
+        >
+          Close
+        </button>
+      </div>
     </Modal>
   );
 }

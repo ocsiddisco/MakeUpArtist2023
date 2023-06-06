@@ -9,9 +9,9 @@ export default function Contact() {
   return (
     <div className="flex flex-col items-center" style={montserrat.style}>
       <Title title="Contact" />
-      <ModalForm isOpen={isOpen} />
+      <ModalForm isOpen={isOpen} onClose={() => setIsOpen(false)} />
       {/* onClose={() => setIsOpen(false)}  */}
-      <div className="flex flex-col  w-4/5 lg:w-1/2 bg-nav01 bg-opacity-80 px-4 py-8">
+      <div className="flex flex-col  w-4/5 lg:w-1/2 bg-nav01 bg-opacity-80 px-4 py-8 rounded">
         <div className="lg:mx-14 mt-4  mb-14 text-twhite text-xl text-center tracking-wider	">
           <p className="pb-4 text-2xl font-semibold">Let's work together!</p>
           <p className="font-light">
@@ -100,7 +100,7 @@ export default function Contact() {
           <div className="flex justify-center">
             <button
               className="w-1/3"
-              type="submit"
+              type="button"
               onClick={() => setIsOpen(true)}
             >
               Send
