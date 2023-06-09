@@ -19,6 +19,12 @@ module.exports = {
         tbrown: "#54433A",
       },
     },
+    screens: {
+      sm: { max: "500px" },
+      md: "800px",
+      lg: "1024px",
+      xl: "1280px",
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

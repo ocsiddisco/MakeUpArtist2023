@@ -6,13 +6,13 @@ export default function AboutMe() {
       <div>
         <Title title="About Me" />
       </div>
-      <div className="flex flex-col items-center mt-14 lg:flex-row lg:p-16 lg:mt-0">
+      <div className="flex flex-col items-center mt-14 xl:flex-row xl:p-16 xl:mt-0">
         <img
-          className="flex rounded-full shadow-md shadow-white max-w-[600px]  max-[600px]:max-w-[300px]"
+          className="flex rounded-full shadow-md shadow-white max-w-[450px] lg:max-w-[600px]  sm:max-w-[300px]"
           src="aboutme.jpg"
           alt="fashion photo"
         />
-        <p className="text-justify p-16 lg:pl-16 lg:p-0">
+        <p className="text-justify p-16 xl:pl-16 xl:p-0">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

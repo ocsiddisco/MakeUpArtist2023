@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { reviews } from "@/pages/api/data";
-import { montserrat, notoSerif } from "@/styles/utils/fonts.js";
+import { montserrat } from "@/styles/utils/fonts.js";
 
 const Carousel = () => {
   const [index, setIndex] = useState(0);

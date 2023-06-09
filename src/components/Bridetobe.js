@@ -16,7 +16,7 @@ const Bridetobe = () => {
           Bride to be
         </p>
         <p className="text-center text-xl italic">Bridal make-up & hair</p>
-        <p className="text-center  pt-6">
+        <p className="text-center  pt-6 xl:mx-52">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut

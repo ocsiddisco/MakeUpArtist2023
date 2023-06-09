@@ -58,4 +58,9 @@ transition: all 0.2s;
 color:#000000;
 background-color:#fbf5f2;
  }
- 
+
+.active {
+background-color: #d2b2a3;
+color: #54433A;
+transition-timing-function: ease-in;
+}

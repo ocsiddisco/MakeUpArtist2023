@@ -2,13 +2,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { openSans } from "@/styles/utils/fonts.js";
 import { navigation } from "@/pages/api/data.js";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div
-      className="h-[15vh] flex justify-center  z-50 uppercase font-normal"
+      className="h-[15vh] xl:h-[10vh] flex justify-center  z-50 uppercase font-normal"
       style={openSans.style}
     >
       <nav className="w-5/6">
@@ -60,13 +62,16 @@ const Navbar = () => {
         {/* DESKTOP MENU */}
         <div className="flex flex-row w-full h-full justify-items-center items-center mt-4 bg-nav01	bg-opacity-25	text-twhite hidden lg:flex ">
           {navigation.map((nav, i) => {
+            const isActive = pathname === nav.href;
             return (
               <div
-                className="flex grow h-full transition duration-500 ease-in-out hover:bg-nav02 hover:text-tbrown"
+                className="flex grow h-full transition duration-500 ease-in-out hover:bg-nav03 hover:opacity-80 hover:text-tbrown"
                 key={i}
               >
                 <Link
-                  className="flex grow h-full opacity-100	justify-center  items-center"
+                  className={`flex grow h-full opacity-100	justify-center  items-center ${
+                    isActive ? "active" : ""
+                  }`}
                   href={nav.href}
                 >
                   {nav.name}

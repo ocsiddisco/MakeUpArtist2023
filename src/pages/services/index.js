@@ -11,10 +11,10 @@ export default function Services() {
         {services.map((service, i) => {
           return (
             <div
-              className="flex flex-row my-5  py-10	rounded bg-nav01 bg-opacity-60 lg:flex-col  lg:mx-5"
+              className="flex flex-row my-5  py-10	rounded bg-nav01 bg-opacity-60  sm:flex-col lg:flex-col  lg:mx-5"
               key={i}
             >
-              <div className="flex flex-col justify-center w-1/2 mx-5 lg:justify-items-center lg:w-full lg:mx-0">
+              <div className="flex flex-col justify-center w-1/2 mx-5 lg:justify-items-center sm:w-full sm:mx-0 lg:w-full lg:mx-0">
                 <p className="text-center pb-2 text-4xl italic tracking-widest uppercase">
                   {service.number}
                 </p>
@@ -22,7 +22,7 @@ export default function Services() {
                   {service.name}
                 </p>
               </div>
-              <p className="text-center p-8 text-lg	tracking-wider">
+              <p className="text-center p-8 text-lg	tracking-wider text-justify	 lg:text-center">
                 {service.text}
               </p>
             </div>
